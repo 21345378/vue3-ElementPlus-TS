@@ -1,0 +1,37 @@
+{
+  "id": "3932303",
+  "name": "admin-mall",
+  "font_family": "iconfont",
+  "css_prefix_text": "mall-",
+  "description": "用于在后台管理系统中使用的字体",
+  "glyphs": [
+    {
+      "icon_id": "34279126",
+      "name": "店铺，商店",
+      "font_class": "a-dianpushangdian",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "34279135",
+      "name": "上传",
+      "font_class": "shangchuan",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "34279139",
+      "name": "发票，小票",
+      "font_class": "a-fapiaoxiaopiao",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "34279155",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    }
+  ]
+}

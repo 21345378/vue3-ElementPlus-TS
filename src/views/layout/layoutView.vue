@@ -37,18 +37,17 @@ const isCollapseWidt = computed(() => {
   width: 100%;
   height: 100%;
 }
-
-.layout-aside {}
-
 /*用来修改一些elementplus自带的相关样式*/
 .el-header {
   padding: 0px;
 }
-
 .el-aside {
   overflow: auto;
   box-sizing: border-box;
   flex-shrink: 0;
   width: var(--el-aside-width, 300px);
+}
+.el-main{
+  padding: 36px;
 }
 </style>

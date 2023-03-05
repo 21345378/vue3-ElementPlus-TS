@@ -1,54 +1,57 @@
 <template>
   <div class="app-container">
-    <div class="address-layout">
-      <el-row :gutter="20">
-        <el-col :span="6">
-          <div class="out-border">
-            <div class="layout-title">后台项目</div>
-            <div class="color-main address-content">
-              <a href="https://github.com/macrozheng/mall">mall</a>
-            </div>
-          </div>
-        </el-col>
-        <el-col :span="6">
-          <div class="out-border">
-            <div class="layout-title">前端项目</div>
-            <div class="color-main address-content">
-              <a href="https://github.com/macrozheng/mall-admin-web">mall-admin-web</a>
-            </div>
-          </div>
-        </el-col>
-        <el-col :span="6">
-          <div class="out-border">
-            <div class="layout-title">学习教程</div>
-            <div class="color-main address-content">
-              <a href="https://github.com/macrozheng/mall-learning">mall-learning</a>
-            </div>
-          </div>
-        </el-col>
-      </el-row>
-    </div>
     <div class="total-layout">
-      <el-row :gutter="20">
-        <el-col :span="6">
+      <el-row :gutter="24">
+        <el-col :span="6" style="padding:0px,margin:0px">
           <div class="total-frame">
-            <img :src="img_home_order" class="total-icon">
-            <div class="total-title">今日订单总数</div>
-            <div class="total-value">200</div>
+            <span class="iconfont mall-wode" />
+            <div class="tital-frame-infomation">
+              <div class="total-title">
+                今日访问总数
+              </div>
+              <div class="total-value">
+                1000
+              </div>
+            </div>
           </div>
         </el-col>
-        <el-col :span="6">
+        <el-col :span="6" style="padding:0px,margin:0px">
           <div class="total-frame">
-            <img :src="img_home_today_amount" class="total-icon">
-            <div class="total-title">今日销售总额</div>
-            <div class="total-value">￥5000.00</div>
+            <span class="iconfont mall-a-dianpushangdian" />
+            <div class="tital-frame-infomation">
+              <div class="total-title">
+                今日订单总数
+              </div>
+              <div class="total-value">
+                200
+              </div>
+            </div>
           </div>
         </el-col>
-        <el-col :span="6">
+        <el-col :span="6" style="padding:0px,margin:0px">
           <div class="total-frame">
-            <img :src="img_home_yesterday_amount" class="total-icon">
-            <div class="total-title">昨日销售总额</div>
-            <div class="total-value">￥5000.00</div>
+            <span class="iconfont mall-a-fapiaoxiaopiao" />
+            <div class="tital-frame-infomation">
+              <div class="total-title">
+                今日订单总数
+              </div>
+              <div class="total-value">
+                200
+              </div>
+            </div>
+          </div>
+        </el-col>
+        <el-col :span="6" style="padding:0px,margin:0px">
+          <div class="total-frame">
+            <span class="iconfont mall-shangchuan" />
+            <div class="tital-frame-infomation">
+              <div class="total-title">
+                今日订单总数
+              </div>
+              <div class="total-value">
+                200
+              </div>
+            </div>
           </div>
         </el-col>
       </el-row>
@@ -57,103 +60,96 @@
 </template>
 
 <script lang="ts" name="homeView" setup>
-import { ElRow,ElCol, } from 'element-plus';
+import { ElRow, ElCol, } from 'element-plus';
 </script>
 
-<style scoped>
-  .app-container {
-    margin-top: 40px;
-    margin-left: 120px;
-    margin-right: 120px;
-  }
+<style scoped lang="less">
+.total-title {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 700
+}
 
-  .address-layout {
-  }
+.total-value {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 700
+}
 
-  .total-layout {
-    margin-top: 20px;
-  }
+.total-frame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff
+}
 
-  .total-frame {
-    border: 1px solid #DCDFE6;
-    padding: 20px;
-    height: 100px;
-  }
+.tital-frame-infomation {
+  margin: 24px 24px 24px 0;
+  font-size: 20px;
+  color: #8c8c8c;
+}
 
-  .total-icon {
-    color: #409EFF;
-    width: 60px;
-    height: 60px;
-  }
+.mall-wode,
+.mall-a-dianpushangdian,
+.mall-a-fapiaoxiaopiao,
+.mall-shangchuan {
+  margin: 14px 0 0 14px;
+  padding: 16px;
+  font-size: 64px;
+}
 
-  .total-title {
-    position: relative;
-    font-size: 16px;
-    color: #909399;
-    left: 70px;
-    top: -50px;
-  }
+.mall-wode {
+  color: #40c9c6;
+}
 
-  .total-value {
-    position: relative;
-    font-size: 18px;
-    color: #606266;
-    left: 70px;
-    top: -40px;
-  }
+.mall-wode:hover {
+  color: #ffffff;
+  background: #40c9c6;
+  border-radius: 8px;
+}
 
-  .un-handle-layout {
-    margin-top: 20px;
-    border: 1px solid #DCDFE6;
-  }
+.mall-a-dianpushangdian {
+  color: #36a3f7;
+}
 
-  .layout-title {
-    color: #606266;
-    padding: 15px 20px;
-    background: #F2F6FC;
-    font-weight: bold;
-  }
+.mall-a-dianpushangdian:hover{
+  color: #ffffff;
+  background: #36a3f7;
+  border-radius: 8px;
+}
+.mall-a-fapiaoxiaopiao {
+  color: #f4516c;
+}
+.mall-a-fapiaoxiaopiao:hover{
+  color: #ffffff;
+  background: #f4516c;
+  border-radius: 8px;
+}
+.mall-shangchuan {
+  color: #34bfa3;
+}
+.mall-shangchuan:hover {
+  color: #ffffff;
+  background: #40c9c6;
+  border-radius: 8px;
+}
 
-  .un-handle-content {
-    padding: 20px 40px;
-  }
 
-  .un-handle-item {
-    border-bottom: 1px solid #EBEEF5;
-    padding: 10px;
-  }
 
-  .overview-layout {
-    margin-top: 20px;
-  }
+//修改ElementPlus自带的样式 
+.el-row {
+  margin-bottom: 20px;
+}
 
-  .overview-item-value {
-    font-size: 24px;
-    text-align: center;
-  }
+.el-row:last-child {
+  margin-bottom: 0;
+}
 
-  .overview-item-title {
-    margin-top: 10px;
-    text-align: center;
-  }
+.el-col {
+  border-radius: 8px;
+}
 
-  .out-border {
-    border: 1px solid #DCDFE6;
-  }
-
-  .statistics-layout {
-    margin-top: 20px;
-    border: 1px solid #DCDFE6;
-  }
-  .mine-layout {
-    position: absolute;
-    right: 140px;
-    top: 107px;
-    width: 250px;
-    height: 235px;
-  }
-  .address-content{
-    padding: 20px;
-    font-size: 18px
-  }
-</style>
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}</style>
