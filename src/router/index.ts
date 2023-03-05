@@ -7,15 +7,23 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/login',
-    name:'loginView',
+    name: 'loginView',
     component: () => import('@/views/login/loginView.vue'),
     meta: { hiddenSide: true }
   },
   {
     path: '/layout',
-    name:'layoutView',
+    name: 'layoutView',
     component: () => import('@/views/layout/layoutView.vue'),
-    meta: { hiddenSide: false }
+    meta: { hiddenSide: false },
+    redirect: '/home',
+    children: [
+      {
+        path: '/home',
+        component: () => import("@/views/homeView/homeView.vue"),
+        meta: { hiddenSide: false, name: '首页', icon: 'House' },
+      },
+    ]
   }
 ];
 
